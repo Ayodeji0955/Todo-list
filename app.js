@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
     let currentDate = today.getDate();
 
     if (currentDate === 6 || currentDate === 0) {
-        res.write("<h1>Yay! it's weekdned!<h1/>")
+        res.write(__dirname + "/weekend.html")
     } else {
-        res.sendFile(__dirname + "/index.html");
+        res.sendFile(__dirname + "/weekday.html");
     }
 
 });
